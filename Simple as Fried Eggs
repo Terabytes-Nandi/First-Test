@@ -1,0 +1,50 @@
+import random
+import time
+
+# Cartas
+Goblin = {
+    'nome': 'Goblin',
+    'saúde': 15,
+    'força': 5
+}
+
+Hobbit = {
+    'nome': 'Hobbit',
+    'saúde': 10,
+    'força': 10
+}
+
+Cavaleiro = {
+    'nome': 'Cavaleiro',
+    'saúde': 30,
+    'força': 10
+}
+
+Mago = {
+    'nome': 'Mago',
+    'saúde': 15,
+    'força': 35
+}
+
+Tanque = {
+    'nome': 'Tanque',
+    'saúde': 55,
+    'força': 5
+}
+
+# Lista para sorteio
+cards = [Goblin, Hobbit, Cavaleiro, Mago, Tanque]
+cards_comp = [Goblin, Hobbit, Cavaleiro, Mago, Tanque]
+
+# Sorteando 3 cartas pra cada um
+minha_mao = random.sample(cards, 3)
+mao_pc = random.sample(cards_comp, 3)
+
+# Exibir cartas sem nome
+print("Suas cartas:")
+for carta in minha_mao:
+    print(f"Vida: {carta['saúde']} | Força: {carta['força']}")
+
+print("\nCartas do computador:")
+for carta in mao_pc:
+    print(f"Vida: {carta['saúde']} | Força: {carta['força']}")
