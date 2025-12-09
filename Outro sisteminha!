@@ -1,0 +1,9 @@
+frase = input("Digite uma frase qualquer!")
+vogais = "AEIOUaeiou"
+contador = 0
+
+for letra in frase:
+    if letra in vogais:
+        contador += 1
+
+print("O número exato de vogais dessa frase é de:", contador)
